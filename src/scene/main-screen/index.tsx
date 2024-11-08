@@ -78,7 +78,7 @@ export const MainScreen = () => {
                             setShowControl={setShowControl}
                         />
                         {/* 地图容器始终占据整个内容区域 */}
-                        <MapComponent mapRef={mapRef} center={center} showControl={showControl} active={!drawerVisible} />
+                        <MapComponent mapRef={mapRef} center={center} showControl={showControl} active={true} />
                     </StyledContent>
                 </Layout>
             </Layout>
