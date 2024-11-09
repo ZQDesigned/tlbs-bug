@@ -42,8 +42,6 @@ export const MainScreen = () => {
                     {/* Header 右侧用户信息 */}
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <Button type={"dashed"} onClick={toggleDrawer} style={{marginRight: 20}}>菜单</Button>
-                        {/* 一个按钮，负责控制 map 暂时不可操作 */}
-
                         <div style={{color: 'white'}}>用户名</div>
                     </div>
                 </StyledHeader>
@@ -78,7 +76,12 @@ export const MainScreen = () => {
                             setShowControl={setShowControl}
                         />
                         {/* 地图容器始终占据整个内容区域 */}
-                        <MapComponent mapRef={mapRef} center={center} showControl={showControl} active={true} />
+                        <MapComponent
+                            mapRef={mapRef}
+                            center={center}
+                            showControl={showControl}
+                            active={!drawerVisible}
+                        />
                     </StyledContent>
                 </Layout>
             </Layout>
